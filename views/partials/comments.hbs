@@ -1,0 +1,42 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            Ultimos Comentarios
+        </h3>
+    </div>
+    <div class="panel-body">
+        <ul class="media-list">
+            {{#each sidebar.comments}}
+            <li class="media">
+                <div class="pull-left">
+
+                    <img 
+                        class="media-object"
+                        src="http://www.gravatar.com/avatar/{{gravatar}}" 
+                        alt="avatar image"
+                    >
+                </div>
+                {{!-- <a href="/images/index/{{uniqueId}}"
+                class="pull-left">
+                    
+                </a>
+                <a href="/images/index/{{uniqueId}}">
+                    <img 
+                        src="/public/upload/{{filename}}"
+                        alt="Imagen de Momento"
+                        class="img-thumbnail"
+                        style="width:75px; height: 75px;">
+                </a> --}}
+                <div class="media-body">
+                    {{comment}} <br>
+                    <strong class="media-heading">{{name}}</strong>
+                    <small class="text-muted">
+                        {{timeago timestamp}}
+                    </small>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+

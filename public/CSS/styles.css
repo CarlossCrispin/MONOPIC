@@ -1,0 +1,14 @@
+body {
+    background: #ee9d84;
+  }
+  a, a:visited {
+    text-decoration: none;
+    outline: 0;
+    color: pink;
+ 
+    -webkit-transition: color .3s ease-in-out;
+    -moz-transition: color .3s ease-in-out;
+    -o-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out;
+ }
+ a:hover, a:focus { color: #f767d7; }

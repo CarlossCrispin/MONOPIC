@@ -1,0 +1,58 @@
+
+{{!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    function redireccionar() {
+        //alert("1");
+        document.getElementById('id01').style.display = 'active';
+        $("#id01").trigger("click");
+    }
+    setTimeout("redireccionar()", 1000); //tiempo expresado en milisegundos
+</script>
+
+<link rel="stylesheet" href="/public/css/modal.css">
+
+<button id="id01" type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">Feliz Cumpleaños </button>
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <video id="bgvid", playsinline autoplay muted loop>
+        <!-- WCAG general accessibility recommendation is that media such as background video play through only once. 
+        Loop turned on for the purposes of illustration; if removed,
+         the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        {{!-- <source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm"> --}}
+        <source src="/public/video/polina.webm" type="video/webm">
+        {{!-- <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4"> --}}
+        {{!-- <source src="" type="video/mp4"> --}}
+
+    </video>
+    <div id="polina">
+        <h1>Montserrat</h1>
+        
+            {{!-- <p><a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">original
+                    article</a> --}}
+                <h3>Feliz Día </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis,
+                    eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam
+                    ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis
+                    mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare
+                    est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+                <p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur,
+                    ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula.
+                    Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+                <p class="pull-right">filmed by Carlos Crispin 2019 </p>
+                <button>Pause</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+
+    <script src="../../public/js/modal.js"></script>
+</div>
