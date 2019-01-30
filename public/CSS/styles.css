@@ -1,6 +1,6 @@
-body {
+/* body {
     background: #ee9d84;
-  }
+  } */
   a, a:visited {
     text-decoration: none;
     outline: 0;
@@ -12,3 +12,505 @@ body {
     transition: color .3s ease-in-out;
  }
  a:hover, a:focus { color: #f767d7; }
+
+ body {
+  background: burlywood;
+ 
+}
+
+#wrapper {
+  width: 175px;
+  height: 125px;
+  position: relative;
+  overflow: hidden;   
+}
+/*
+/////////////////////////////
+PIG
+/////////////////////////////
+*/
+
+@import "reset.css";
+
+.pink {
+    background-color: pink;
+}
+
+.dark-pink {
+    background-color: #f69a8f;
+}
+
+.teal {
+    background-color: rgba(95, 158, 160, 0.7);
+}
+
+.pig {
+    width: 75px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    z-index: -10;
+}
+
+.pigone {
+    left: 5%;
+    z-index: -1;
+}
+
+.pigtwo {
+    right: 2%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    bottom: 7%;
+    z-index: -2;
+}
+
+.pigthree {
+    left: 2%;
+    top: 8%;
+    z-index: -3;
+}
+
+.pigfour {
+    right: 12%;
+    top: 3%;
+    z-index: -4;
+}
+
+.pigtwo .pink {
+    background-color: #efb9c6;
+}
+
+.pigtwo .dark-pink {
+    background-color: #ea938c;
+}
+
+.pigthree .pink {
+    background-color: #e0b1bd;
+}
+
+.pigthree .dark-pink {
+    background-color: #db867f;
+}
+
+@keyframes movetwo {
+    0% {
+        right: -100%;
+    }
+    25% {
+        right: -100%;
+    }
+    40% {
+        right: 2%;
+    }
+    100% {
+        right: 2%;
+    }
+}
+
+.pigtwo {
+    animation-duration: 7s;
+    animation-name: movetwo;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes movethree {
+    0% {
+        left: -100%;
+    }
+    40% {
+        left: -100%;
+    }
+    55% {
+        left: 2%;
+    }
+    100% {
+        left: 2%;
+    }
+}
+
+.pigthree {
+    animation-duration: 7s;
+    animation-name: movethree;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+@keyframes movefour {
+    0% {
+        right: -100%;
+    }
+    55% {
+        right: -100%;
+    }
+    70% {
+        right: 12%;
+    }
+    100% {
+        right: 12%;
+    }
+}
+
+.pigfour {
+    animation-duration: 7s;
+    animation-name: movefour;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+
+
+.pig-mainbody {
+    height: 89%;
+    width: 100%;
+    position: relative;
+}
+
+/* ////////// NOSE & EYES ///////////// */
+
+.nose,
+.eyes {
+    width: 33%;
+    height: 50%;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.eyes {
+    left: 33%;
+    top: 0;
+    position: absolute;
+}
+
+.nostrils-wrap,
+.eyes-wrap {
+    height: 15%;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.nostrils,
+.pupils {
+    height: 100%;
+    width: 33%;
+    border-radius: 50%;
+    align-self: center;
+}
+
+@keyframes blink {
+    0% {
+        height: 100%;
+        width: 33%;
+        border-radius: 50%;
+        align-self: center;
+    }
+    2% {
+        height: 6%;
+        width: 33%;
+        border-radius: 20%;
+        align-self: center;
+    }
+
+    4% {
+        height: 100%;
+        width: 33%;
+        border-radius: 50%;
+        align-self: center;
+    }
+    80% {
+        height: 100%;
+        width: 33%;
+        border-radius: 50%;
+        align-self: center;
+    }
+    82% {
+        height: 6%;
+        width: 33%;
+        border-radius: 20%;
+        align-self: center;
+    }
+
+    84% {
+        height: 100%;
+        width: 33%;
+        border-radius: 50%;
+        align-self: center;
+    }
+    100% {
+        height: 100%;
+        width: 33%;
+        border-radius: 50%;
+        align-self: center;
+    }
+}
+
+.pupils {
+    animation-duration: 8s;
+    animation-name: blink;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-iteration-count: infinite;
+}
+
+/* ////////// BODY //////////////////// */
+
+.body-wrap {
+    width: 83%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.top-left {
+    border-top-left-radius: 100%;
+}
+
+.top-right {
+    border-top-right-radius: 100%;
+}
+
+.bottom-left {
+    border-bottom-left-radius: 100%;
+}
+
+.bottom-right {
+    border-bottom-right-radius: 100%;
+}
+
+.quarter {
+    width: 100%;
+    height: 50%;
+}
+.body-left,
+.body-right {
+    width: 40%;
+    height: 100%;
+}
+
+.body-mid {
+    height: 100%;
+    width: 20%;
+}
+
+.ear {
+    width: 17%;
+    height: 50%;
+    position: absolute;
+    top: 21%;
+    left: 66%;
+}
+
+/* ////////// TAIL & MOUTH ///////////// */
+
+.tail-wrap,
+.mouth-wrap {
+    position: absolute;
+    overflow: hidden;
+}
+
+.tail-wrap {
+    width: 8%;
+    height: 25%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.mouth-wrap {
+    width: 11%;
+    height: 8%;
+    left: 27%;
+    top: 63%;
+    z-index: 10;
+}
+
+.tail,
+.mouth {
+    box-sizing: border-box;
+    border-radius: 50%;
+    bottom: 0;
+    position: absolute;
+}
+
+.tail {
+    border: 0.55em solid pink;
+    width: 200%;
+    height: 100%;
+    right: 0;
+}
+
+.mouth {
+    border: 0.5em solid #f69a8f;
+    width: 100%;
+    height: 200%;
+}
+
+.pigtwo .tail {
+    border: 0.55em solid #efb9c6;
+}
+
+.pigtwo .mouth {
+    border: 0.5em solid #ea938c;
+}
+
+.pigthree .tail {
+    border: 0.55em solid #e0b1bd;
+}
+
+.pigthree .mouth {
+    border: 0.5em solid #db867f;
+}
+
+
+/* ////////// LEGS ///////////// */
+
+.leg-wrap {
+    display: flex;
+    width: 6%;
+    height: 15%;
+    position: absolute;
+}
+.leg-left {
+    width: 50%;
+    height: 100%;
+    transform: skew(0deg, -17deg);
+}
+
+.leg-right {
+    width: 50%;
+    height: 100%;
+    transform: skew(0deg, 17deg);
+}
+
+.one,
+.two,
+.three,
+.four {
+    top: 84%;
+}
+.one,
+.three {
+    z-index: -1;
+}
+
+.two,
+.four {
+    z-index: 10;
+    transform: rotate(0deg);
+}
+.one {
+    left: 37%;
+}
+
+.two {
+    left: 47%;
+}
+
+.three {
+    left: 60%;
+}
+
+.four {
+    left: 70%;
+}
+
+@keyframes stepone {
+    0% {
+        top: 84%;
+    }
+
+    10% {
+        top: 84%;
+    }
+
+    20% {
+        top: 80%;
+    }
+    30% {
+        top: 84%;
+    }
+    100% {
+        top: 84%;
+    }
+}
+
+@keyframes steptwo {
+    0% {
+        top: 80%;
+    }
+    10% {
+        top: 84%;
+    }
+    90% {
+        top: 84%;
+    }
+    100% {
+        top: 80%;
+    }
+}
+
+@keyframes stepthree {
+    0% {
+        top: 84%;
+    }
+    60% {
+        top: 84%;
+    }
+    70% {
+        top: 80%;
+    }
+    80% {
+        top: 84%;
+    }
+    100% {
+        top: 84%;
+    }
+}
+
+@keyframes stepfour {
+    0% {
+        top: 84%;
+    }
+    80% {
+        top: 84%;
+    }
+    90% {
+        top: 80%;
+    }
+    100% {
+        top: 84%;
+    }
+}
+
+.one,
+.two,
+.three,
+.four {
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    animation-iteration-count: infinite;
+}
+
+.one {
+    animation-name: stepone;
+}
+
+.two {
+    animation-name: steptwo;
+}
+
+.three {
+    animation-name: stepthree;
+}
+
+.four {
+    animation-name: stepfour;
+}
