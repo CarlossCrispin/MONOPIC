@@ -1,6 +1,4 @@
-/* body {
-    background: #ee9d84;
-  } */
+
   a, a:visited {
     text-decoration: none;
     outline: 0;
@@ -15,7 +13,18 @@
 
  body {
   background: burlywood;
- 
+  /* background: #ee9d84; */
+}
+.panel-default > .panel-heading {
+  color: rgb(241, 237, 238);
+  background-color: #ee9d84;
+  border-color:#f69a8f;
+}
+.panel-default > .panel-body{
+  color: rgb(37, 36, 36);
+  background-color:burlywood;
+  border-color:#f69a8f;
+  /* opacity: 0.2; */
 }
 
 #wrapper {
